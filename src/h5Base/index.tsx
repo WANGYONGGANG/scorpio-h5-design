@@ -12,7 +12,7 @@ const getSchemaByUrlParams = async function(): Promise<IPageSchema[]> {
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
   if (id) {
-    const data = await window.fetch(`https://design.lxzyl.cn/api/page/getSchema?id=${id}`);
+    const data = await window.fetch(`http://10.10.130.31:7001/api/page/getSchema?id=${id}`);
     const res = await data.json();
     return res.data.pageSchema;
   } else {
